@@ -1,0 +1,215 @@
+html{scroll-behavior: smooth;}
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body {background-image: url('https://us.123rf.com/450wm/tirachard/tirachard1802/tirachard180200064/95656773-creative-flat-lay-photo-of-workspace-desk-top-view-office-desk-with-laptop-blank-empty-notebooks-and.jpg?ver=6');background-repeat: no-repeat;   background-attachment: fixed;
+  background-size: cover;  font-family: 'poppins',sans-serif;}
+
+header{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-weight: bold;
+}
+
+header img{
+	width: 15em;
+	height: auto;
+	border-radius:50% ;
+	animation: abc 1s infinite;
+}
+@keyframes abc{
+	0%{
+		box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+	}
+	100%{
+		box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+	}
+}
+
+header h3{
+	color:black;
+	margin: 1.5rem 0;
+letter-spacing: 0.2rem;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+header p{
+	color:darkblue;
+}
+.arrow{
+	color: darkblue;
+	margin-top: 7rem;
+	font-size: 100rem;
+	animation: arrow 5s ease-in-out infinite;
+}
+@keyframes arrow{
+	0%{color: #3c6382;}
+	50%{color: #0a3d62}
+	100%{color: #3c6382}
+}
+.container{
+	width: 100%;
+	min-height: 150vh;
+	display: grid;
+	grid-template-columns: 1fr  1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 0.8fr 0.2fr;
+    gap: 1rem;
+    grid-template-areas: "profile profile skills skills" 
+   
+    "edu edu edu lang" 
+
+
+    "contact exp exp exp"
+    " footer footer footer footer";
+    padding: 2rem;
+   
+    
+    
+}
+ .profile{
+ 	background:hotpink;
+ 	color:white;
+ 	padding: 2rem;
+ 	grid-area: profile;
+ }
+ .skills{
+ 	background: skyblue;
+ 	color: white;
+ 	padding: 2rem;
+    grid-area: skills;
+ 	}
+ .edu
+ {
+ 	background: lightgreen;
+ 	color: black;
+ 	padding: 2rem;
+ 	grid-area: edu;
+ 
+ }
+ .lang
+ {
+ 	background: royalblue;
+ 	color: white;
+ 	padding: 2rem;
+   grid-area: lang;
+ }
+ .contact
+ {
+ 	background: lightyellow;
+ 	color: black;
+ 	padding: 2rem;
+ 	grid-area: contact;
+ }
+ .exp
+ {
+ 	background: palegoldenrod;
+ 	color: black;
+ 	padding: 2rem;
+    grid-area: exp;
+ 	}
+footer
+{
+	color: white;
+	background: #3c6382;
+	padding: 2rem;
+	grid-area: footer;
+}
+h2
+{
+	margin-bottom: 1rem;
+}
+.profile p{
+	padding: 0.3rem 1rem;
+	text-align: justify;
+	line-height: 2.2rem;
+}
+.profile a
+{
+	text-decoration: none;
+	padding: 0.5rem 0.7rem;
+	background: purple;
+	color: white;
+}
+.skills div
+{
+	width: 100%;
+	padding: 0.5rem 1rem;
+}
+.skills div progress[value]
+{
+	width: 100%;
+	height: 1rem;
+}
+.edu h2
+{
+	letter-spacing: 0.1rem;
+}
+.edu padding
+{
+padding: 0.3rem 1rem;
+	text-align: justify;
+	line-height: 2.2rem;
+}
+.edu a {
+	text-decoration: none;
+	padding: 0.5rem 0.7rem;
+	background: blue;
+	color: white;
+
+}
+.lang p{
+   font-size: 3rem;
+   font-family: sans-serif;
+}
+.lang a {
+	text-decoration: underline;
+	padding: 0.5rem 0.7rem;
+	background:black;
+	color: white;
+}
+.contact div i {
+	margin-right: 0.2rem;
+}
+.contact p {
+margin: 1rem 0;
+cursor: pointer;
+}
+footer
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5rem;
+	
+}
+footer i {
+	background: white;
+	color: black;
+	padding: 0.5rem;
+	margin: 1rem 0.2rem;
+	border-radius: 50%;
+	transition: 0.4s;
+}
+footer i:hover
+{
+	background: #0a3d62;
+	color: white;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 770px)
+{
+	.container{
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.8fr 0.6 1fr 0.6fr 0.5fr 0.8fr 0.1;
+	    grid-template-areas: "profile"
+	    "skills"
+	    "edu"
+	    "lang"
+	    "contact"
+	    "exp"
+	    "footer";
+	}
+}
